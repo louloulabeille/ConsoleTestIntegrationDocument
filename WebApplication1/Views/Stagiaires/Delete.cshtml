@@ -1,0 +1,69 @@
+﻿@model ModelAfpa.Stagiaire
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Stagiaire</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriculeStagiaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MatriculeStagiaire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateNaissanceStagiaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateNaissanceStagiaire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomPersonne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomPersonne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrenomPersonne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrenomPersonne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CivilitePersonne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CivilitePersonne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SexePersonne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SexePersonne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdresseMail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdresseMail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CatPersonne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CatPersonne)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdPersonne" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

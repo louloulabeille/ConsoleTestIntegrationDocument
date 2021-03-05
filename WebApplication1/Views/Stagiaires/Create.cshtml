@@ -1,0 +1,63 @@
+﻿@model ModelAfpa.Stagiaire
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Stagiaire</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MatriculeStagiaire" class="control-label"></label>
+                <input asp-for="MatriculeStagiaire" class="form-control" />
+                <span asp-validation-for="MatriculeStagiaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateNaissanceStagiaire" class="control-label"></label>
+                <input asp-for="DateNaissanceStagiaire" class="form-control" />
+                <span asp-validation-for="DateNaissanceStagiaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomPersonne" class="control-label"></label>
+                <input asp-for="NomPersonne" class="form-control" />
+                <span asp-validation-for="NomPersonne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrenomPersonne" class="control-label"></label>
+                <input asp-for="PrenomPersonne" class="form-control" />
+                <span asp-validation-for="PrenomPersonne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CivilitePersonne" class="control-label"></label>
+                <input asp-for="CivilitePersonne" class="form-control" />
+                <span asp-validation-for="CivilitePersonne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SexePersonne" class="control-label"></label>
+                <input asp-for="SexePersonne" class="form-control" />
+                <span asp-validation-for="SexePersonne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdresseMail" class="control-label"></label>
+                <input asp-for="AdresseMail" class="form-control" />
+                <span asp-validation-for="AdresseMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
