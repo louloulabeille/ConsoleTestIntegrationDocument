@@ -21,7 +21,13 @@ namespace WebApplication1.Models
         {
             _emailConfiguration = emailConfiguration;
         }
-
+        /// <summary>
+        /// methode d'envoie de mail
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="subject"></param>
+        /// <param name="htmlMessage"></param>
+        /// <returns></returns>
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             try
