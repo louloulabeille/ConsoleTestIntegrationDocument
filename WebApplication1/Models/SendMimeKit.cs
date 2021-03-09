@@ -45,7 +45,6 @@ namespace WebApplication1.Models
                 {
                     client.ServerCertificateValidationCallback = (s, c, h, e) => true;
                     client.Connect(_emailConfiguration.SmtpServer, _emailConfiguration.SmtpPort, MailKit.Security.SecureSocketOptions.StartTls);
-                    client.AuthenticationMechanisms.Remove("XOAUTH2");
                     client.Authenticate(_emailConfiguration.SmtpUsername, _emailConfiguration.SmtpPassword);
                     await Task.Run(()=> client.Send(message));
                     client.Disconnect(true);
