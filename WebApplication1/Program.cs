@@ -11,6 +11,10 @@ namespace WebApplication1
 {
     public class Program
     {
+        /// <summary>
+        /// Démarrage
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
