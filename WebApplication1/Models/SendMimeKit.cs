@@ -17,10 +17,17 @@ namespace WebApplication1.Models
     public class SendMimeKit : IEmailSender
     {
         private readonly IEmailConfiguration _emailConfiguration = null;
+        #region constructeur
+        /// <summary>
+        /// constructeur
+        /// </summary>
+        /// <param name="emailConfiguration"></param>
         public SendMimeKit(IEmailConfiguration emailConfiguration)
         {
             _emailConfiguration = emailConfiguration;
         }
+        #endregion
+
         /// <summary>
         /// methode d'envoie de mail
         /// </summary>
